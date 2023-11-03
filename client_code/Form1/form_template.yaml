@@ -7,11 +7,39 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: input_text
+    properties: {height: 208, placeholder: input_text, auto_expand: false}
+    type: TextArea
+    layout_properties: {grid_position: 'TREQIG,BYUUII'}
+  - name: summarize_button
+    properties: {text: Summarize, align: left, background: 'theme:Primary', foreground: 'theme:Primary
+        Container'}
+    type: Button
+    layout_properties: {grid_position: 'JQIRVM,BYFVOB'}
+  - name: summary
+    properties: {spacing_below: medium, format: markdown}
+    type: RichText
+    layout_properties: {grid_position: 'FIWISC,HZEORF'}
+  - name: ask_question
+    properties: {placeholder: ask_question, italic: false}
+    type: TextBox
+    layout_properties: {grid_position: 'RTWLUG,NPIXAT'}
+  - name: button_1
+    properties: {text: Ask Question, align: right, background: 'theme:Primary', foreground: 'theme:Primary
+        Container'}
+    type: Button
+    layout_properties: {grid_position: 'BEEKOO,VYSJEE'}
+    event_bindings: {click: button_1_click}
+  - name: answer
+    properties: {format: markdown}
+    type: RichText
+    layout_properties: {grid_position: 'MPTKHG,VCSORQ'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components: []
 - name: label_1
   properties: {text: Summarizer and Q&A App}
   type: Label
