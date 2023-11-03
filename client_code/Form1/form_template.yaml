@@ -33,7 +33,7 @@ components:
     layout_properties: {grid_position: 'BEEKOO,VYSJEE'}
     event_bindings: {click: button_1_click}
   - name: answer
-    properties: {spacing_below: medium, format: markdown}
+    properties: {spacing_below: medium, format: markdown, border: 5px}
     type: RichText
     layout_properties: {grid_position: 'EOJMFU,YESRIB'}
 - type: FlowPanel
