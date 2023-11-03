@@ -21,6 +21,7 @@ components:
     properties: {spacing_below: medium, format: markdown}
     type: RichText
     layout_properties: {grid_position: 'FIWISC,HZEORF'}
+    components: []
   - name: ask_question
     properties: {placeholder: ask_question, italic: false}
     type: TextBox
@@ -32,9 +33,9 @@ components:
     layout_properties: {grid_position: 'BEEKOO,VYSJEE'}
     event_bindings: {click: button_1_click}
   - name: answer
-    properties: {format: markdown}
+    properties: {spacing_below: medium, format: markdown}
     type: RichText
-    layout_properties: {grid_position: 'MPTKHG,VCSORQ'}
+    layout_properties: {grid_position: 'EOJMFU,YESRIB'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
