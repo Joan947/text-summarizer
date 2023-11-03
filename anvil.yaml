@@ -8,6 +8,8 @@ allow_embedding: false
 name: doc_decoder
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
+metadata: {title: doc_decoder}
 startup_form: Form1
 db_schema: {}
+uplink_visible: true
 renamed: true
