@@ -8,40 +8,61 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
-  - name: input_text
-    properties: {height: 208, placeholder: input_text, auto_expand: false}
-    type: TextArea
-    layout_properties: {grid_position: 'TREQIG,BYUUII'}
-  - name: summarize_button
-    properties: {text: Summarize, align: left, background: 'theme:Primary', foreground: 'theme:Primary
-        Container'}
-    type: Button
-    layout_properties: {grid_position: 'JQIRVM,BYFVOB'}
-  - name: summary
-    properties: {spacing_below: medium, format: markdown}
-    type: RichText
-    layout_properties: {grid_position: 'FIWISC,HZEORF'}
-    components: []
-  - name: ask_question
-    properties: {placeholder: ask_question, italic: false}
-    type: TextBox
-    layout_properties: {grid_position: 'RTWLUG,NPIXAT'}
-  - name: button_1
-    properties: {text: Ask Question, align: right, background: 'theme:Primary', foreground: 'theme:Primary
-        Container'}
-    type: Button
-    layout_properties: {grid_position: 'BEEKOO,VYSJEE'}
-    event_bindings: {click: button_1_click}
-  - name: answer
-    properties: {spacing_below: medium, format: markdown, border: 5px}
-    type: RichText
-    layout_properties: {grid_position: 'EOJMFU,YESRIB'}
+  - name: label_2
+    properties: {text: 'This is an app that summarizes text and is able to generate
+        answers to questions asked relating to the text. It uses NLP models to achieve
+        this purpose. This is an initial draft and the models have to be fine tuned
+        to improve its performance. So be expecting future updates. '}
+    type: Label
+    layout_properties: {grid_position: 'URRLVD,JDQYIE'}
+  - name: grid_panel_2
+    properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'QRAECW,XXJRWL'}
+    components:
+    - name: input_text
+      properties: {height: 208, placeholder: input_text, auto_expand: false}
+      type: TextArea
+      layout_properties: {row: HLGRIF, width_xs: 7, col_xs: 0}
+    - name: answer
+      properties: {spacing_below: medium, format: markdown, border: '', font_size: 15,
+        background: 'theme:On Primary'}
+      type: RichText
+      layout_properties: {row: HLGRIF, width_xs: 5, col_xs: 7}
+      data_bindings: []
+      event_bindings: {}
+    - name: summary
+      properties: {spacing_below: medium, format: markdown}
+      type: RichText
+      layout_properties: {row: HLGRIF, width_xs: 5, col_xs: 7}
+      components: []
+    - name: summarize_button
+      properties: {text: Summarize, align: left, background: 'theme:Primary', foreground: 'theme:Primary
+          Container'}
+      type: Button
+      layout_properties: {row: OBGHXL, width_xs: 12, col_xs: 0}
+      event_bindings: {click: summarize_button_click}
+  - name: grid_panel_1
+    properties: {}
+    type: GridPanel
+    layout_properties: {grid_position: 'PGYIIX,NDCLXA'}
+    components:
+    - name: ask_question
+      properties: {placeholder: ask_question, italic: false}
+      type: TextBox
+      layout_properties: {row: LEJWRL, width_xs: 9, col_xs: 0}
+    - name: button_1
+      properties: {text: Ask Question, align: right, background: 'theme:Primary',
+        foreground: 'theme:Primary Container'}
+      type: Button
+      layout_properties: {row: LEJWRL, width_xs: 3, col_xs: 9}
+      event_bindings: {click: button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
   components: []
 - name: label_1
-  properties: {text: Summarizer and Q&A App}
+  properties: {text: Document Decoder}
   type: Label
   layout_properties: {slot: title}

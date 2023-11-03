@@ -17,8 +17,12 @@ class Form1(Form1Template):
     self.answer.content = res
     self.answer.format ='markdown'
 
+  def summarize_button_click(self, **event_args):
+    input_text = self.input_text.text
+    #call the function from jupyter
+    result = anvil.server.call('summarize_text', input_text)
+    self.summary.content = result
 
-  
   
     
     
